@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoalZone | Football Store</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container nav">
+        <a href="index.html" class="logo">
+            <i class="fa-solid fa-futbol"></i> GoalZone
+        </a>
+
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+            <button onclick="toggleSearch()">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <a href="cart.html" class="cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="cartCount">0</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="search-box" id="searchBox">
+        <input type="text" id="searchInput" placeholder="Search football products...">
+        <button onclick="searchProducts()">Search</button>
+    </div>
+</header>
+
+<main>
+
+<section class="hero">
+    <div class="hero-content">
+        <span class="hero-tag">THE BEAUTIFUL GAME</span>
+        <h1>PLAY<br><span>WITH PASSION.</span></h1>
+        <p>
+            Premium football gear for players who want to perform,
+            compete and stand out on the pitch.
+        </p>
+        <a href="shop.html" class="btn">SHOP NOW <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+
+    <div class="hero-ball">
+        <i class="fa-solid fa-futbol"></i>
+    </div>
+</section>
+
+<section class="categories container">
+    <div class="section-heading">
+        <span>SHOP BY CATEGORY</span>
+        <h2>Gear Up For The Game</h2>
+    </div>
+
+    <div class="category-grid">
+        <a href="shop.html?category=jerseys" class="category-card">
+            <i class="fa-solid fa-shirt"></i>
+            <h3>Jerseys</h3>
+            <p>Match-ready kits</p>
+        </a>
+
+        <a href="shop.html?category=boots" class="category-card">
+            <i class="fa-solid fa-shoe-prints"></i>
+            <h3>Football Boots</h3>
+            <p>Speed & control</p>
+        </a>
+
+        <a href="shop.html?category=balls" class="category-card">
+            <i class="fa-solid fa-futbol"></i>
+            <h3>Football</h3>
+            <p>Match balls & training</p>
+        </a>
+
+        <a href="shop.html?category=training" class="category-card">
+            <i class="fa-solid fa-dumbbell"></i>
+            <h3>Training</h3>
+            <p>Train like a pro</p>
+        </a>
+    </div>
+</section>
+
+<section class="featured">
+    <div class="container">
+        <div class="section-heading row-heading">
+            <div>
+                <span>FEATURED PRODUCTS</span>
+                <h2>Fan Favorites</h2>
+            </div>
+            <a href="shop.html" class="view-link">View All →</a>
+        </div>
+
+        <div class="product-grid" id="featuredProducts"></div>
+    </div>
+</section>
+
+<section class="promo container">
+    <div>
+        <span>LIMITED TIME OFFER</span>
+        <h2>20% OFF<br>FOOTBALL GEAR</h2>
+        <p>Use code <strong>GOAL20</strong> at checkout.</p>
+        <a href="shop.html" class="btn light">SHOP SALE</a>
+    </div>
+
+    <div class="promo-ball">
+        <i class="fa-solid fa-futbol"></i>
+    </div>
+</section>
+
+<section class="why container">
+    <div class="section-heading">
+        <span>WHY GOALZONE?</span>
+        <h2>Built For Football</h2>
+    </div>
+
+    <div class="features">
+        <div>
+            <i class="fa-solid fa-truck-fast"></i>
+            <h3>Fast Delivery</h3>
+            <p>Quick and reliable delivery.</p>
+        </div>
+
+        <div>
+            <i class="fa-solid fa-shield-halved"></i>
+            <h3>Secure Shopping</h3>
+            <p>Your information stays protected.</p>
+        </div>
+
+        <div>
+            <i class="fa-solid fa-rotate-left"></i>
+            <h3>Easy Returns</h3>
+            <p>Simple returns on eligible products.</p>
+        </div>
+
+        <div>
+            <i class="fa-solid fa-headset"></i>
+            <h3>Support</h3>
+            <p>We're here when you need us.</p>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<footer class="footer">
+    <div class="container footer-grid">
+        <div>
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-futbol"></i> GoalZone
+            </a>
+            <p>Your football. Your passion. Your game.</p>
+        </div>
+
+        <div>
+            <h4>Shop</h4>
+            <a href="shop.html">All Products</a>
+            <a href="shop.html?category=jerseys">Jerseys</a>
+            <a href="shop.html?category=boots">Boots</a>
+            <a href="shop.html?category=balls">Football</a>
+        </div>
+
+        <div>
+            <h4>Company</h4>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <div>
+            <h4>Follow Us</h4>
+            <div class="socials">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-x-twitter"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="copyright">
+        © 2026 GoalZone. All rights reserved.
+    </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
