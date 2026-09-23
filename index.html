@@ -1,659 +1,294 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>GoalZone — Football Store</title>
+  <meta
+    name="description"
+    content="KickCraft - a modern football gear e-commerce store."
+  >
 
-    <link rel="stylesheet" href="style.css">
+  <title>KickCraft | Football Gear</title>
 
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- ================= TOP BAR ================= -->
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container nav">
 
-<div class="topbar">
-    <div class="container">
-        ⚡ FREE SHIPPING ON ORDERS ABOVE ₹1,999
+      <a href="#" class="logo">
+        <span>⚽</span>
+        KICKCRAFT
+      </a>
+
+      <nav>
+        <a href="#shop">Shop</a>
+        <a href="#collections">Collections</a>
+        <a href="#about">About</a>
+      </nav>
+
+      <button class="cart-button" id="cartButton">
+        🛒 Cart
+        <b id="cartCount">0</b>
+      </button>
+
     </div>
-</div>
+  </header>
 
 
-<!-- ================= NAVBAR ================= -->
+  <!-- HERO -->
+  <main>
 
-<header class="navbar">
+    <section class="hero">
 
-    <div class="container nav-content">
+      <div class="container hero-grid">
 
-        <a href="#" class="logo">
-            GOAL<span>ZONE</span>
+        <div class="hero-content">
+
+          <p class="eyebrow">
+            PLAY HARD. LOOK SHARP.
+          </p>
+
+          <h1>
+            Gear up for
+            <br>
+            <em>the next goal.</em>
+          </h1>
+
+          <p class="hero-copy">
+            Fresh football essentials for training, match day,
+            and everything in between.
+          </p>
+
+          <a href="#shop" class="primary-button">
+            Shop the collection →
+          </a>
+
+        </div>
+
+        <div class="hero-ball">
+          <div class="ball">⚽</div>
+
+          <div class="speed-line line-one"></div>
+          <div class="speed-line line-two"></div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- TRUST BAR -->
+    <section class="trust-bar">
+
+      <div class="container trust-grid">
+
+        <span>🚚 Free delivery over $60</span>
+        <span>↩️ 30-day easy returns</span>
+        <span>✓ Secure checkout</span>
+        <span>★ 4.9/5 player rating</span>
+
+      </div>
+
+    </section>
+
+
+    <!-- PRODUCTS -->
+    <section class="section" id="shop">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div>
+            <p class="eyebrow">THE LINEUP</p>
+            <h2>Featured gear</h2>
+          </div>
+
+          <div class="filters">
+
+            <button class="filter active" data-filter="all">
+              All
+            </button>
+
+            <button class="filter" data-filter="boots">
+              Boots
+            </button>
+
+            <button class="filter" data-filter="apparel">
+              Apparel
+            </button>
+
+            <button class="filter" data-filter="accessories">
+              Accessories
+            </button>
+
+          </div>
+
+        </div>
+
+        <div class="product-grid" id="productGrid"></div>
+
+      </div>
+
+    </section>
+
+
+    <!-- PROMOTION -->
+    <section class="promo" id="collections">
+
+      <div class="container promo-inner">
+
+        <div>
+
+          <p class="eyebrow">
+            MATCH-DAY READY
+          </p>
+
+          <h2>
+            Build your five-a-side kit.
+          </h2>
+
+          <p>
+            Pick a boot, grab a jersey, and finish the look
+            with game-day essentials.
+          </p>
+
+        </div>
+
+        <a href="#shop" class="secondary-button">
+          Explore gear
         </a>
 
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#shop">Shop</a>
-            <a href="#categories">Categories</a>
-            <a href="#new">New Arrivals</a>
-            <a href="#sale">Sale</a>
-        </nav>
+      </div>
 
-        <div class="nav-actions">
-
-            <button id="searchButton">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-
-            <button>
-                <i class="fa-regular fa-user"></i>
-            </button>
-
-            <button id="cartButton" class="cart-button">
-                <i class="fa-solid fa-bag-shopping"></i>
-                <span id="cartCount">0</span>
-            </button>
-
-            <button id="menuButton" class="menu-button">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-
-        </div>
-
-    </div>
-
-</header>
+    </section>
 
 
-<!-- ================= MOBILE MENU ================= -->
+    <!-- ABOUT -->
+    <section class="section about" id="about">
 
-<div class="mobile-menu" id="mobileMenu">
-
-    <a href="#home">Home</a>
-    <a href="#shop">Shop</a>
-    <a href="#categories">Categories</a>
-    <a href="#new">New Arrivals</a>
-    <a href="#sale">Sale</a>
-
-</div>
-
-
-<!-- ================= HERO ================= -->
-
-<section class="hero" id="home">
-
-    <div class="hero-content">
-
-        <div class="hero-badge">
-            THE NEW FOOTBALL SEASON
-        </div>
-
-        <h1>
-            PLAY<br>
-            <span>WITHOUT</span><br>
-            LIMITS.
-        </h1>
-
-        <p>
-            Premium football gear built for players
-            who never stop chasing the next goal.
-        </p>
-
-        <div class="hero-buttons">
-
-            <a href="#shop" class="primary-btn">
-                SHOP NOW
-                <i class="fa-solid fa-arrow-right"></i>
-            </a>
-
-            <a href="#categories" class="secondary-btn">
-                EXPLORE
-            </a>
-
-        </div>
-
-    </div>
-
-    <!-- CSS GENERATED FOOTBALL -->
-    <div class="hero-ball">
-        <div class="ball-shape">
-            ⚽
-        </div>
-    </div>
-
-</section>
-
-
-<!-- ================= CATEGORIES ================= -->
-
-<section class="section" id="categories">
-
-    <div class="section-heading">
+      <div class="container about-grid">
 
         <div>
-            <span class="eyebrow">SHOP BY CATEGORY</span>
-            <h2>Find Your Game</h2>
+
+          <p class="eyebrow">
+            WHY KICKCRAFT?
+          </p>
+
+          <h2>
+            Small store.
+            <br>
+            Big football energy.
+          </h2>
+
         </div>
 
         <p>
-            Everything you need to dominate the pitch.
+          KickCraft is a demo storefront designed around the
+          simple things players actually need: reliable gear,
+          clean design, transparent prices, and a checkout flow
+          that stays out of the way.
         </p>
 
-    </div>
+      </div>
+
+    </section>
+
+  </main>
 
 
-    <div class="category-grid">
+  <!-- FOOTER -->
+  <footer>
 
-        <div class="category-card">
+    <div class="container footer-inner">
 
-            <div class="category-visual jersey-visual">
-                <div class="jersey-shape">
-                    <span>GZ</span>
-                </div>
-            </div>
+      <span>
+        © 2026 KickCraft
+      </span>
 
-            <h3>Jerseys</h3>
-            <p>24 Products</p>
-
-        </div>
-
-
-        <div class="category-card">
-
-            <div class="category-visual boot-visual">
-                <div class="boot-shape"></div>
-            </div>
-
-            <h3>Football Boots</h3>
-            <p>18 Products</p>
-
-        </div>
-
-
-        <div class="category-card">
-
-            <div class="category-visual ball-visual">
-                <div class="mini-ball">⚽</div>
-            </div>
-
-            <h3>Football</h3>
-            <p>16 Products</p>
-
-        </div>
-
-
-        <div class="category-card">
-
-            <div class="category-visual gloves-visual">
-                <div class="glove-shape">
-                    🧤
-                </div>
-            </div>
-
-            <h3>Goalkeeper</h3>
-            <p>12 Products</p>
-
-        </div>
+      <span>
+        Made for football people.
+      </span>
 
     </div>
 
-</section>
-
-
-<!-- ================= SHOP ================= -->
-
-<section class="section products-section" id="shop">
-
-    <div class="section-heading">
-
-        <div>
-            <span class="eyebrow">OUR COLLECTION</span>
-            <h2>Popular Gear</h2>
-        </div>
-
-        <button class="filter-btn" id="filterButton">
-            FILTER
-            <i class="fa-solid fa-sliders"></i>
-        </button>
-
-    </div>
-
-
-    <div class="product-grid" id="productGrid">
-
-        <!-- PRODUCT 1 -->
-
-        <article class="product-card" data-category="jersey">
-
-            <div class="product-image jersey-product">
-
-                <span class="product-badge">NEW</span>
-
-                <button class="wishlist">
-                    <i class="fa-regular fa-heart"></i>
-                </button>
-
-                <div class="generated-jersey">
-                    <div class="shirt">
-                        <span>GOAL</span>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="product-info">
-
-                <span class="product-category">
-                    JERSEY
-                </span>
-
-                <h3>GoalZone Performance Jersey</h3>
-
-                <div class="rating">
-                    ★★★★★
-                    <span>(48)</span>
-                </div>
-
-                <div class="price">
-                    ₹1,299
-                    <del>₹1,799</del>
-                </div>
-
-                <button
-                    class="add-cart"
-                    data-product="GoalZone Performance Jersey"
-                    data-price="1299"
-                >
-                    ADD TO CART
-                </button>
-
-            </div>
-
-        </article>
-
-
-        <!-- PRODUCT 2 -->
-
-        <article class="product-card" data-category="boots">
-
-            <div class="product-image boot-product">
-
-                <span class="product-badge hot">HOT</span>
-
-                <button class="wishlist">
-                    <i class="fa-regular fa-heart"></i>
-                </button>
-
-                <div class="generated-boot">
-                    <div class="boot"></div>
-                </div>
-
-            </div>
-
-            <div class="product-info">
-
-                <span class="product-category">
-                    FOOTBALL BOOTS
-                </span>
-
-                <h3>Velocity X Pro Boots</h3>
-
-                <div class="rating">
-                    ★★★★★
-                    <span>(72)</span>
-                </div>
-
-                <div class="price">
-                    ₹3,999
-                    <del>₹5,499</del>
-                </div>
-
-                <button
-                    class="add-cart"
-                    data-product="Velocity X Pro Boots"
-                    data-price="3999"
-                >
-                    ADD TO CART
-                </button>
-
-            </div>
-
-        </article>
-
-
-        <!-- PRODUCT 3 -->
-
-        <article class="product-card" data-category="football">
-
-            <div class="product-image ball-product">
-
-                <button class="wishlist">
-                    <i class="fa-regular fa-heart"></i>
-                </button>
-
-                <div class="generated-ball">
-                    ⚽
-                </div>
-
-            </div>
-
-            <div class="product-info">
-
-                <span class="product-category">
-                    FOOTBALL
-                </span>
-
-                <h3>Pro Match Football</h3>
-
-                <div class="rating">
-                    ★★★★★
-                    <span>(31)</span>
-                </div>
-
-                <div class="price">
-                    ₹899
-                </div>
-
-                <button
-                    class="add-cart"
-                    data-product="Pro Match Football"
-                    data-price="899"
-                >
-                    ADD TO CART
-                </button>
-
-            </div>
-
-        </article>
-
-
-        <!-- PRODUCT 4 -->
-
-        <article class="product-card" data-category="goalkeeper">
-
-            <div class="product-image glove-product">
-
-                <span class="product-badge">SALE</span>
-
-                <button class="wishlist">
-                    <i class="fa-regular fa-heart"></i>
-                </button>
-
-                <div class="generated-gloves">
-                    🧤
-                </div>
-
-            </div>
-
-            <div class="product-info">
-
-                <span class="product-category">
-                    GOALKEEPER
-                </span>
-
-                <h3>Pro Grip Goalkeeper Gloves</h3>
-
-                <div class="rating">
-                    ★★★★★
-                    <span>(26)</span>
-                </div>
-
-                <div class="price">
-                    ₹1,599
-                    <del>₹2,199</del>
-                </div>
-
-                <button
-                    class="add-cart"
-                    data-product="Pro Grip Goalkeeper Gloves"
-                    data-price="1599"
-                >
-                    ADD TO CART
-                </button>
-
-            </div>
-
-        </article>
-
-    </div>
-
-</section>
-
-
-<!-- ================= PROMO ================= -->
-
-<section class="promo">
-
-    <div>
-
-        <span>BUILT FOR THE PITCH</span>
-
-        <h2>
-            YOUR GAME.<br>
-            YOUR GEAR.
-        </h2>
-
-        <p>
-            Premium equipment. Better performance.
-            No excuses.
-        </p>
-
-        <a href="#shop" class="primary-btn">
-            SHOP COLLECTION
-        </a>
-
-    </div>
-
-    <div class="promo-ball">
-        ⚽
-    </div>
-
-</section>
-
-
-<!-- ================= NEWSLETTER ================= -->
-
-<section class="newsletter">
-
-    <div>
-
-        <span class="eyebrow">
-            STAY IN THE GAME
-        </span>
-
-        <h2>
-            Get the latest drops.
-        </h2>
-
-        <p>
-            New products, exclusive offers and football updates.
-        </p>
-
-    </div>
-
-    <form id="newsletterForm">
-
-        <input
-            type="email"
-            id="email"
-            placeholder="Enter your email"
-            required
-        >
-
-        <button type="submit">
-            SUBSCRIBE
-        </button>
-
-    </form>
-
-</section>
-
-
-<!-- ================= FOOTER ================= -->
-
-<footer>
-
-    <div class="footer-grid">
-
-        <div>
-
-            <a href="#" class="logo">
-                GOAL<span>ZONE</span>
-            </a>
-
-            <p>
-                Your game. Your gear.
-                Premium football products for players and fans.
-            </p>
-
-            <div class="socials">
-
-                <a href="#">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-
-                <a href="#">
-                    <i class="fa-brands fa-facebook"></i>
-                </a>
-
-                <a href="#">
-                    <i class="fa-brands fa-x-twitter"></i>
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <div>
-
-            <h4>SHOP</h4>
-
-            <a href="#">Jerseys</a>
-            <a href="#">Football Boots</a>
-            <a href="#">Football</a>
-            <a href="#">Goalkeeper</a>
-
-        </div>
-
-
-        <div>
-
-            <h4>HELP</h4>
-
-            <a href="#">Contact Us</a>
-            <a href="#">Shipping</a>
-            <a href="#">Returns</a>
-            <a href="#">Size Guide</a>
-
-        </div>
-
-
-        <div>
-
-            <h4>CONTACT</h4>
-
-            <p>📍 Kerala, India</p>
-            <p>📞 +91 00000 00000</p>
-            <p>✉️ hello@goalzone.store</p>
-
-        </div>
-
-    </div>
-
-
-    <div class="copyright">
-
-        © 2026 GoalZone. All rights reserved.
-
-    </div>
-
-</footer>
-
-
-<!-- ================= CART SIDEBAR ================= -->
-
-<div class="overlay" id="overlay"></div>
-
-<aside class="cart-sidebar" id="cartSidebar">
+  </footer>
+
+
+  <!-- CART OVERLAY -->
+  <div
+    class="cart-overlay"
+    id="cartOverlay"
+    hidden
+  ></div>
+
+
+  <!-- CART -->
+  <aside
+    class="cart-drawer"
+    id="cartDrawer"
+    aria-hidden="true"
+  >
 
     <div class="cart-header">
 
-        <h2>Your Cart</h2>
+      <h2>Your cart</h2>
 
-        <button id="closeCart">
-            <i class="fa-solid fa-xmark"></i>
-        </button>
-
-    </div>
-
-
-    <div class="cart-items" id="cartItems">
-
-        <div class="empty-cart">
-
-            <i class="fa-solid fa-bag-shopping"></i>
-
-            <h3>Your cart is empty</h3>
-
-            <p>Add some football gear to get started.</p>
-
-        </div>
+      <button id="closeCart">
+        ✕
+      </button>
 
     </div>
+
+
+    <div
+      id="cartItems"
+      class="cart-items"
+    ></div>
 
 
     <div class="cart-footer">
 
-        <div class="cart-total">
+      <div class="total-row">
 
-            <span>Total</span>
+        <span>Total</span>
 
-            <strong id="cartTotal">
-                ₹0
-            </strong>
+        <strong id="cartTotal">
+          $0.00
+        </strong>
 
-        </div>
+      </div>
 
-        <button class="checkout-btn">
-            CHECKOUT
-        </button>
+      <button
+        class="checkout-button"
+        id="checkoutButton"
+      >
+        Checkout
+      </button>
 
-    </div>
-
-</aside>
-
-
-<!-- ================= SEARCH MODAL ================= -->
-
-<div class="search-modal" id="searchModal">
-
-    <div class="search-box">
-
-        <button id="closeSearch">
-            <i class="fa-solid fa-xmark"></i>
-        </button>
-
-        <h2>Search GoalZone</h2>
-
-        <input
-            type="text"
-            id="searchInput"
-            placeholder="Search jerseys, boots, football..."
-        >
-
-        <div id="searchResults"></div>
+      <small>
+        Demo checkout — no payment is processed.
+      </small>
 
     </div>
 
-</div>
+  </aside>
 
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 
 </body>
 </html>
